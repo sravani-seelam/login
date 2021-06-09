@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
+    <div class="wel">
+    <h2>WELCOME TO VTIE-IN </h2>
+  </div>
+ <p>Click the below button to open the registration page</p>
+
+ <button class="open-button" onclick="openForm()">Login Form</button>
+
+
+ <div class="form-popup" id="myForm">
+   <form action="/action_page.php">
     <div class="signform">
       <div class="title">
            Welcome to Vtie-in<br>
@@ -64,6 +74,17 @@
           <input type="submit" name="sub" value="Sign-in" class="btn">
       </div>
     </div>
+  </form>
   </div>
+</div>
+  <script>
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+  </script>
   </body>
 </html>
