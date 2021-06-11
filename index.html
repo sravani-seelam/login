@@ -4,9 +4,27 @@
     <meta charset="utf-8">
     <title>Vtie-in form</title>
     <link rel="stylesheet" href="fo.css">
+    <script src="script.js">
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-
+    <div class="navbar">
+      <nav>
+        <div class="search-container">
+   <form>
+     <input type="text" placeholder="Search.." name="search">
+     <button type="submit"><i class="fa fa-search"></i></button>
+   </form>
+ </div>
+           <ul id="MenuItems">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+               <li><a href="#">Contact</a></li>
+             </ul>
+          </nav>
+    </div>
     <div class="signform">
       <div class="title">
            Welcome to Vtie-in<br>
@@ -50,10 +68,25 @@
         </div>
         <div class="name">
           <label for="pro">Profession:</label>
-          <input type="radio" name="pro" id="pro" >Doctor<br><br>
-            <input type="radio" name="pro"     id="pro">Student<br>
-          <input type="radio" name="pro" id="pro" >Other</label><br>
+          <input type="radio" onclick="javascript:profession();"   name="pro" id="doc" >Doctor
+            <input type="radio" onclick="javascript:profession();"  name="pro"     id="stu">Student
+            <input type="radio"  onclick="javascript:profession();" name="pro" id="oth" >Other</br>
+          </div>
+          <div class="name">
+             <div id="doctor"  style="visibility:hidden"  >
+                <br>  <label>Registration Number:</label><input type="text" id="regnum" name="regnum" class="input"></br>
+                  <label>Aadhar Number:</label><input type="text" id="docaadh" name="docaadh" class="input"><br>
+                  <label>Hospital Name:</label><input type="text" id="hos" name="hos" class="input">
+             </div>
+             <div id="student"  style="visibility:hidden"  >
+                  <label>Collage Name:</label><input type="text" id="colnam" name="colnam" class="input"></br>
+                  <label>Aadhar Number:</label><input type="text" id="stuaadh" name="stuaadh" class="input"><br>
             </div>
+            <div id="other"  style="visibility:hidden"  >
+                 <label>Location Name:</label><input type="text" id="locnam" name="locnam" class="input"></br>
+                 <label>Ocupation:</label><input type="text" id="occ" name="occ" class="input"><br>
+           </div>
+         </div>
               <div class="name terms">
               <label class="check">
                 <input type="checkbox">
